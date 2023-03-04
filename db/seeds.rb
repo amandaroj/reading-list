@@ -6,3 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 # Book.create([{title: "A Thousand Splendid Suns"}])
+require 'faker'
+
+puts 'Creating 100 fake books...'
+100.times do
+  book = Book.new(
+    title: Faker::Book.title,
+    author: Faker::Book.author
+  )
+  book.save!
+end
+puts 'Finished!'

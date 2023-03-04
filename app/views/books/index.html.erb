@@ -12,3 +12,10 @@
     </div>
 
 <p>Create an account to favorite/ add to your list</p>
+
+<ul>
+  <% @books.each do |book| %>
+    <li><%= book.title %></li>
+    <li><%= book.author %></li>
+  <% end %>
+</ul>

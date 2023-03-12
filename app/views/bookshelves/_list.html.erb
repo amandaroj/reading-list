@@ -1,0 +1,7 @@
+<div id="bookshelves">
+  <% @bookshelves.each do |bookshelf| %>
+      <%= render bookshelf %> <p>
+      <%= link_to "Show this bookshelf", bookshelf %>
+    </p>
+  <% end %>
+</div>

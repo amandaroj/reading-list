@@ -1,4 +1,4 @@
 class Book < ApplicationRecord
-  belongs_to :bookshelves, :authors
-  has_many :reviews, :genres
+  belongs_to :bookshelves
+  has_many :reviews
 end

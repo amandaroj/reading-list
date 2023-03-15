@@ -17,7 +17,7 @@ class BookshelvesController < ApplicationController
     @bookshelf = Bookshelf.new(bookshelf_params)
 
     if @bookshelf.save
-      redirect_to @bookshelf, notice: 'Bookshelf was successfully created.'
+      redirect_to @bookshelf
     else
       render :new, status: :unprocessable_entity
     end
@@ -25,7 +25,7 @@ class BookshelvesController < ApplicationController
 
   def update
     if @bookshelf.update(bookshelf_params)
-      redirect_to @bookshelf, notice: 'Bookshelf was successfully updated.'
+      redirect_to @bookshelf, notice:
     else
       render :edit, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class BookshelvesController < ApplicationController
 
   def destroy
     @bookshelf.destroy
-    redirect_to bookshelves_path, notice: 'Bookshelf was successfully destroyed.'
+    redirect_to bookshelves_path, notice:
   end
 
   private

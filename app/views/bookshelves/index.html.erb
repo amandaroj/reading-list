@@ -1,2 +1,7 @@
 <h1>Bookshelves#index</h1>
 <p>Find me in app/views/bookshelves/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<%= render "bookshelves/list", bookshelves: @bookshelves %>
+
+<%= link_to "New bookshelf", new_bookshelf_path %>

@@ -1,2 +1,30 @@
 <h1>Bookshelves#show</h1>
 <p>Find me in app/views/bookshelves/show.html.erb</p>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @bookshelf %>
+
+<%# <p><strong>Reviews</strong></p>
+
+<ul class="list-group">
+  <% @bookshelf.reviews.each do |review| %>
+    <%# <li class="list-group-item">
+      <%= review.content %>
+      <%# <%= link_to "Delete",
+        review_path(review),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <%#
+    </li>
+  <% end %>
+<%# </ul>
+<br> %>
+
+
+
+<div>
+  <%= link_to "Edit this bookshelf", edit_bookshelf_path(@bookshelf) %> |
+  <%= link_to "Back to bookshelves", bookshelves_path %>
+
+  <%= button_to "Destroy this bookshelf", @bookshelf, method: :delete %>
+</div>

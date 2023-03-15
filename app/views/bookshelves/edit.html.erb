@@ -1,2 +1,11 @@
 <h1>Bookshelves#edit</h1>
 <p>Find me in app/views/bookshelves/edit.html.erb</p>
+
+<%= render "form", bookshelf: @bookshelf %>
+
+<br>
+
+<div>
+  <%= link_to "Show this bookshelf", @bookshelf %> |
+  <%= link_to "Back to bookshelvess", bookshelves_path %>
+</div>
